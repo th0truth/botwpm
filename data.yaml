@@ -1,0 +1,58 @@
+https://monkeytype.com/:
+  cookies:
+    xpath: //dialog[@id='cookiesModal']/div[2]/div[2]/div[2]/button[1]
+  login:
+    url: https://monkeytype.com/login
+    xpath:
+      form:
+        email: //input[@name='current-email']
+        password: //input[@name='current-password']
+      submit: //button[@class='signIn']
+  typing-field:
+    path:
+      input: //div[@id='wordsWrapper']
+      words: div#words
+      word: div[class='word active'] letter
+
+https://10fastfingers.com/: 
+  cookies:
+    xpath: //button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']
+  login:
+    url: https://10fastfingers.com/login
+    xpath:
+      form:
+        email: //input[@id='UserEmail']
+        password: //*[@id='UserPassword']
+      submit: //button[@id='login-form-submit']
+  typing-field:
+    path:
+      input: //input[@id='inputfield']
+      words: div#words
+      word: span.highlight
+
+https://typetest.io/:
+  login:
+    url: https://typetest.io/login
+    xpath:
+      form:
+        email: //input[@id='email']
+        password: //input[@id='password']
+      submit: //button[@type='submit']
+  typing-field:
+    path:
+      input: //input[@id='test-input']
+      words: div#test-text
+      word: span[class='test-word']
+  config:
+    time:
+      10: //span[@value='10000']
+      30: //span[@value='30000']
+      60: //span[@value='60000']
+      120: //span[@value='120000']
+      300: //span[@value='300000']
+    words-list:
+      simple: //ul[@id="settings-list"]/li[5]/span[2]/span[@value='simple']
+      advanced: //ul[@id="settings-list"]/li[5]/span[2]/span[@value='advanced']
+    punctuation:
+      "on": //*[@id="settings-list"]/li[6]/span[2]/span[1]
+      "off": //*[@id="settings-list"]/li[6]/span[2]/span[2]
