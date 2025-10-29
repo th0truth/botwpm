@@ -130,6 +130,7 @@ class BotWPM:
       self.driver.quit()
 
   def run(self):
+    self.driver.get(self.__url)
     self.__sign_in_user()
     self.__accept_cookies()
     self.__set_config()
